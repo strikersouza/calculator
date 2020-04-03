@@ -30,7 +30,30 @@
                 return divide; 
             }
         }
-        console.log();
+
+        function operate(operator, num1, num2){
+            let operation = 0;
+            switch(operator){
+                case '+':
+                    operation = add(num1, num2);
+                    break;
+                case '-':
+                    operation = subtract(num1, num2);
+                    break;
+                case '*':
+                    operation = multiply(num1, num2);
+                    break;
+                case '/': 
+                    operation = divide(num1, num2);
+                    break;
+                default:
+                    return "Invalid Operator";
+                    break;
+            }
+            return operation;
+        }
+
+        console.log(operate('+', 2, 2));
     </script>
 </body>
 </html>
